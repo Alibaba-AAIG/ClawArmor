@@ -22,13 +22,25 @@
 
 ## 演示
 
-| 演示 | 说明 | 视频 |
-|------|------|------|
-| 直接注入检测 | 实时检测直接提示词注入攻击 | [▶ 观看演示]() |
-| 间接注入检测 | 检测隐藏在工具返回中的注入攻击 | [▶ 观看演示]() |
-| 攻击链检测 | 跨工具调用的完整攻击链检测 | [▶ 观看演示]() |
-| 规则进化 | Shadow 规则验证后晋升为 Active | [▶ 观看演示]() |
-| 自进化升级 | ClawArmor 自升级与防御进化 | [▶ 观看演示]() |
+<div align="center">
+<table>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">直接注入检测 — 实时检测直接提示词注入攻击</p><video title="直接注入检测" alt="实时检测直接提示词注入攻击" src="https://github.com/user-attachments/assets/24da407f-17b2-4dff-b267-f620ab3effc3" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">间接注入检测 — 检测隐藏在工具返回中的注入攻击</p><video title="间接注入检测" alt="检测隐藏在工具返回中的注入攻击" src="https://github.com/user-attachments/assets/176d0282-828e-4029-8531-2cf2dbf68efa" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">攻击链检测 — 跨工具调用的完整攻击链检测</p><video title="攻击链检测" alt="跨工具调用的完整攻击链检测" src="https://github.com/user-attachments/assets/d77c6070-d18f-41a1-96e6-f3922471f83d" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">规则进化 — Shadow 规则验证后晋升为 Active</p><video title="规则进化" alt="Shadow 规则验证后晋升为 Active" src="https://github.com/user-attachments/assets/7bf8a039-f152-461d-a472-de3628e5ebe3" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">自进化升级 — ClawArmor 自升级与防御进化</p><video title="自进化升级" alt="ClawArmor 自升级与防御进化" src="https://github.com/user-attachments/assets/972ba70c-7647-4bb4-b85d-7fadc577237e" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+</table>
+</div>
 
 ---
 
