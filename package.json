@@ -1,0 +1,94 @@
+{
+  "name": "@clawarmor/clawarmor",
+  "version": "2.0.0",
+  "description": "ClawArmor security guard for OpenClaw - protects against prompt injection, data exfiltration, and malicious commands with Evolve adaptive defense",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "clawarmor-dashboard": "./dist/cli/dashboard.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "install-plugin": "npm run build && mkdir -p ~/.openclaw/extensions/clawarmor/dist && cp -r dist/* ~/.openclaw/extensions/clawarmor/dist/ && cp openclaw.plugin.json ~/.openclaw/extensions/clawarmor/",
+    "update-plugin": "npm run build && cp -r dist/* ~/.openclaw/extensions/clawarmor/dist/",
+    "restart-gateway": "openclaw gateway restart 2>/dev/null || echo 'Please restart OpenClaw gateway manually'",
+    "deploy": "npm run update-plugin && npm run restart-gateway",
+    "dashboard": "node dist/cli/dashboard.js"
+  },
+  "keywords": [
+    "openclaw",
+    "security",
+    "guardrails",
+    "prompt-injection",
+    "data-exfiltration",
+    "pii",
+    "credential-theft",
+    "command-injection",
+    "safety",
+    "agent-security",
+    "clawarmor",
+    "evolve",
+    "adaptive-defense"
+  ],
+  "author": "ClawArmor Team",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/clawarmor/openclaw-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clawarmor/openclaw-plugin.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/src"],
+    "testMatch": ["**/__tests__/**/*.test.ts"],
+    "transform": {
+      "^.+\\.tsx?$": ["ts-jest", {
+        "tsconfig": {
+          "module": "commonjs",
+          "esModuleInterop": true,
+          "types": ["node", "jest"]
+        }
+      }]
+    },
+    "testTimeout": 30000
+  },
+  "openclaw": {
+    "plugin": true,
+    "extensions": ["./dist/index.js"],
+    "hooks": [
+      "message_received",
+      "before_agent_start",
+      "llm_input",
+      "before_tool_call",
+      "llm_output"
+    ],
+    "commands": [
+      "/clawarmor_status",
+      "/clawarmor_enable",
+      "/clawarmor_disable",
+      "/clawarmor_config"
+    ]
+  }
+}

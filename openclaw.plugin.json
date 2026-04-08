@@ -1,0 +1,174 @@
+{
+  "id": "clawarmor",
+  "name": "ClawArmor",
+  "description": "ClawArmor security guard for OpenClaw - protects against prompt injection, data exfiltration, and malicious commands. Includes Evolve adaptive defense that auto-generates and evolves detection rules.",
+  "version": "2.0.0",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "description": "Enable or disable ClawArmor guard (default: true)"
+      },
+      "blockOnCritical": {
+        "type": "boolean",
+        "description": "Block requests when critical risk is detected (default: true)"
+      },
+      "blockOnHighRisk": {
+        "type": "boolean",
+        "description": "Block requests when high risk is detected (default: false)"
+      },
+      "logAllChecks": {
+        "type": "boolean",
+        "description": "Log all security checks for debugging (default: false)"
+      },
+      "maxInputLength": {
+        "type": "number",
+        "description": "Maximum input length to process (default: 10000)"
+      },
+      "externalApiThreshold": {
+        "type": "number",
+        "description": "Threshold for external API risk scoring (default: 0.8)"
+      },
+      "maskSensitiveData": {
+        "type": "boolean",
+        "description": "Mask sensitive data like credentials in logs (default: true)"
+      },
+      "apiEndpoint": {
+        "type": "string",
+        "description": "External API endpoint for secondary validation (optional)"
+      },
+      "apiKey": {
+        "type": "string",
+        "description": "API key for external validation service (optional)",
+        "advanced": true
+      },
+      "evolveEnabled": {
+        "type": "boolean",
+        "description": "Enable Evolve adaptive defense - auto-generates detection rules from attacks (default: true)"
+      },
+      "evolveDbPath": {
+        "type": "string",
+        "description": "Path to store Evolve event database (default: ~/.openclaw/clawarmor/events.db)"
+      },
+      "evolveRulesPath": {
+        "type": "string",
+        "description": "Path to store Evolve rules JSON file (default: ~/.openclaw/clawarmor/rules.json)"
+      },
+      "evolveUpdateInterval": {
+        "type": "number",
+        "description": "Number of events before triggering an evolution cycle (default: 5)"
+      },
+      "evolveLlmApiBase": {
+        "type": "string",
+        "description": "LLM API base URL for rule generation (default: DashScope)"
+      },
+      "evolveLlmApiKey": {
+        "type": "string",
+        "description": "LLM API key for rule generation",
+        "advanced": true
+      },
+      "evolveLlmModel": {
+        "type": "string",
+        "description": "LLM model name for rule generation (default: qwen3-max)"
+      },
+      "evolveTargetFpRate": {
+        "type": "number",
+        "description": "Target false positive rate for adaptive threshold (default: 0.05)"
+      },
+      "evolveTargetFnRate": {
+        "type": "number",
+        "description": "Target false negative rate for adaptive threshold (default: 0.02)"
+      }
+    }
+  },
+  "uiHints": {
+    "enabled": {
+      "label": "Enable Guard",
+      "help": "Enable or disable ClawArmor security protection"
+    },
+    "blockOnCritical": {
+      "label": "Block on Critical",
+      "help": "Block requests when critical security risks are detected"
+    },
+    "blockOnHighRisk": {
+      "label": "Block on High Risk",
+      "help": "Block requests when high security risks are detected"
+    },
+    "logAllChecks": {
+      "label": "Log All Checks",
+      "help": "Enable detailed logging of all security checks",
+      "advanced": true
+    },
+    "maxInputLength": {
+      "label": "Max Input Length",
+      "help": "Maximum input length to process for security checks",
+      "advanced": true
+    },
+    "externalApiThreshold": {
+      "label": "API Threshold",
+      "help": "Risk score threshold for external API validation (0-1)",
+      "advanced": true
+    },
+    "maskSensitiveData": {
+      "label": "Mask Sensitive Data",
+      "help": "Mask sensitive data like credentials in logs",
+      "advanced": true
+    },
+    "apiEndpoint": {
+      "label": "API Endpoint",
+      "help": "External API endpoint for secondary validation",
+      "advanced": true
+    },
+    "apiKey": {
+      "label": "API Key",
+      "help": "API key for external validation service",
+      "advanced": true
+    },
+    "evolveEnabled": {
+      "label": "Enable Evolve",
+      "help": "Enable adaptive defense that automatically generates new detection rules from observed attacks"
+    },
+    "evolveDbPath": {
+      "label": "Evolve DB Path",
+      "help": "File path for storing defense events (used for rule evolution)",
+      "advanced": true
+    },
+    "evolveRulesPath": {
+      "label": "Evolve Rules Path",
+      "help": "File path for storing evolved defense rules",
+      "advanced": true
+    },
+    "evolveUpdateInterval": {
+      "label": "Evolution Interval",
+      "help": "Number of defense events before triggering an evolution cycle",
+      "advanced": true
+    },
+    "evolveLlmApiBase": {
+      "label": "LLM API Base",
+      "help": "LLM API base URL for AI-powered rule generation",
+      "advanced": true
+    },
+    "evolveLlmApiKey": {
+      "label": "LLM API Key",
+      "help": "API key for the LLM service used in rule generation",
+      "advanced": true
+    },
+    "evolveLlmModel": {
+      "label": "LLM Model",
+      "help": "LLM model name for rule generation (e.g., qwen3-max)",
+      "advanced": true
+    },
+    "evolveTargetFpRate": {
+      "label": "Target FP Rate",
+      "help": "Target false positive rate (0-1) for adaptive threshold tuning",
+      "advanced": true
+    },
+    "evolveTargetFnRate": {
+      "label": "Target FN Rate",
+      "help": "Target false negative rate (0-1) for adaptive threshold tuning",
+      "advanced": true
+    }
+  }
+}
