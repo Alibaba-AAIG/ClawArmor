@@ -22,14 +22,25 @@
 
 ## Demo
 
-| Demo | Description | Video |
-|------|-------------|-------|
-| Direct Injection | Detecting direct prompt injection attacks in real-time | [▶ Watch Demo]() |
-| Indirect Injection | Detecting injection attacks hidden in tool responses | [▶ Watch Demo]() |
-| Attack Chain | Full attack chain detection across tool calls | [▶ Watch Demo]() |
-| Rule Evolution | Shadow rules promoting to Active after validation | [▶ Watch Demo]() |
-| Self-Evolution | ClawArmor self-upgrade and defense evolution | [▶ Watch Demo]() |
-
+<div align="center">
+<table>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">Direct Injection Detection</p><video title="Direct Injection" alt="Detecting direct prompt injection attacks in real-time" src="https://github.com/user-attachments/assets/24da407f-17b2-4dff-b267-f620ab3effc3" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">Indirect Injection Detection</p><video title="Indirect Injection" alt="Detecting injection attacks hidden in tool responses" src="https://github.com/user-attachments/assets/176d0282-828e-4029-8531-2cf2dbf68efa" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">Attack Chain Detection</p><video title="Attack Chain" alt="Full attack chain detection across tool calls" src="https://github.com/user-attachments/assets/d77c6070-d18f-41a1-96e6-f3922471f83d" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">Rule Evolution</p><video title="Rule Evolution" alt="Shadow rules promoting to Active after validation" src="https://github.com/user-attachments/assets/7bf8a039-f152-461d-a472-de3628e5ebe3" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+<tr>
+<td align="center"><p style="margin:0 0 8px 0; color:#666; font-size:13px;">Self-Evolution Upgrade</p><video title="Self-Evolution" alt="ClawArmor self-upgrade and defense evolution" src="https://github.com/user-attachments/assets/972ba70c-7647-4bb4-b85d-7fadc577237e" controls preload="metadata" style="width:100%; max-width:600px; height:338px; object-fit:cover;"></video></td>
+</tr>
+</table>
+</div>
 ---
 
 ## Architecture Overview
